@@ -13,7 +13,7 @@ let data2 = [{
 },{
   value: 'Azul',
 }]
-export default function Compra({ navigation }) {
+export default function CompraScreen({ navigation }) {
   
   return (
     <View style={styles.container}>
@@ -34,7 +34,7 @@ export default function Compra({ navigation }) {
       />
       <View style={styles.container2}>
         <Button
-              title="COMPRAR"
+              title="SIGUIENTE"
               color="#6200EE"
               style={styles.botonCompra}
             />

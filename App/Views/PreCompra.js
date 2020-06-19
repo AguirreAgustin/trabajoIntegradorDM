@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 
-export default function PreCompra({ navigation }) {
+export default function PreCompraScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ marginTop: "10%" }}>
@@ -23,14 +23,7 @@ export default function PreCompra({ navigation }) {
             />
       </View>
       
-      <View style={{
-            marginTop: "45%",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "90%",
-        }}>
-        
-      </View>
+
     </View>
   );
 }
@@ -44,22 +37,25 @@ const styles = StyleSheet.create({
   },
   container2: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f2f2f2",
     alignItems: 'center',
     //justifyContent: "center",
   },
   titulo: {
     textAlign:"left",
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginLeft: 10
   },
   descripcion: {
     textAlign:"left",
     fontSize: 17,
+    marginLeft: 10
   },
   precio:{
     textAlign:"left",
     fontSize: 20,
+    marginLeft: 10
   },
   precioEnvio:{
     fontSize: 17,
@@ -67,6 +63,7 @@ const styles = StyleSheet.create({
   perfilVendedor: {
     textAlign: 'left',
     color: '#7300e6',
+    marginLeft: 10
   },
   botonComprar: { 
     marginBottom: "10px", 
