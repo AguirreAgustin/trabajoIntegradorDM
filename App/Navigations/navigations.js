@@ -14,6 +14,7 @@ import ModoPago from "../Views/ModoPago";
 import ModoEntrega from "../Views/ModoEntrega";
 import PreCompraScreen from "../Views/PreCompra";
 import CompraScreen from "../Views/Compra";
+import MontoTotalScreen from "../Views/MontoTotal";
 
 const Stack = createStackNavigator();
 const FlujoCompradorStack = () => {
@@ -110,6 +111,17 @@ const FlujoCompradorStack = () => {
       <Stack.Screen
         name="Compra"
         component={CompraScreen}
+        options={({ navigation }) => ({
+          headerTitleAlign: "center",
+          headerTintColor: "black",
+          headerLeft: (props) => (
+            <MenuHamburguesa {...props} navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="MontoTotal"
+        component={MontoTotalScreen}
         options={({ navigation }) => ({
           headerTitleAlign: "center",
           headerTintColor: "black",

@@ -30,6 +30,7 @@ export default class ModoEntrega extends React.Component {
 
   render() {
     const { botonEfectivoSeleccionado, botonMPSeleccionado } = this.state;
+    const { navigation } = this.props;
     return (
       <Grid>
         <Row
@@ -113,8 +114,7 @@ export default class ModoEntrega extends React.Component {
         >
           <Button
             title="Siguiente"
-            //   onPress={() => navigation.push("ModoPago")}
-
+            onPress={() => navigation.push("MontoTotal")}
             color="#6200ed"
           />
         </Row>
