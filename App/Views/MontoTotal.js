@@ -15,7 +15,7 @@ export default function MontoTotalScreen({ navigation }) {
 
       <View style={styles.container2}>
         <Text style={styles.masDetalles}>Más detales de la compra</Text>
-        <Button title="RESERVAR" color="#6200EE" style={styles.botonCompra} />
+        <Button title="RESERVAR" color="#6200EE" style={styles.botonCompra} onPress={() => navigation.push("ReservaExito")}/>
       </View>
     </View>
   );
