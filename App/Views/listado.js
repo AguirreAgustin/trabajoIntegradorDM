@@ -173,6 +173,9 @@ export default class Listado extends React.Component {
   pressButton = (selectedIndex) => {
     console.log(selectedIndex);
     this.setState({ selectedIndex });
+    if (selectedIndex == 2) {
+      this.props.navigation.push("PreCompraScreen");
+    }
   };
 
   render() {

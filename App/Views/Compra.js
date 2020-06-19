@@ -1,45 +1,44 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
-import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from "react-native-material-dropdown";
 
-let data1 = [{
-  value: 'S',
-},{
-  value: 'M',
-}]
+let data1 = [
+  {
+    value: "S",
+  },
+  {
+    value: "M",
+  },
+];
 
-let data2 = [{
-  value: 'Amarillo',
-},{
-  value: 'Azul',
-}]
+let data2 = [
+  {
+    value: "Amarillo",
+  },
+  {
+    value: "Azul",
+  },
+];
 export default function CompraScreen({ navigation }) {
-  
   return (
     <View style={styles.container}>
       <View style={{ marginTop: "10%" }}>
         <Image
-          style={{ width: 400 , height: 250 }}
+          style={{ width: 400, height: 250 }}
           source={require("../../assets/bikiniAmarillo.png")}
         />
       </View>
       <Text style={styles.titulo}>Bikini 2019 Corpiño Soft y Culootte</Text>
-      <Dropdown
-      label='Talle'
-      data={data1}
-      />
-      <Dropdown 
-      label='Color'
-      data={data2}
-      />
+      <Dropdown label="Talle" data={data1} />
+      <Dropdown label="Color" data={data2} />
       <View style={styles.container2}>
         <Button
-              title="SIGUIENTE"
-              color="#6200EE"
-              style={styles.botonCompra}
-            />
+          title="SIGUIENTE"
+          color="#6200EE"
+          style={styles.botonCompra}
+          onPress={() => navigation.push("ModoPago")}
+        />
       </View>
-      
     </View>
   );
 }
@@ -53,17 +52,16 @@ const styles = StyleSheet.create({
   container2: {
     flex: 1,
     backgroundColor: "#f2f2f2",
-    alignItems: 'center',
+    alignItems: "center",
     //justifyContent: "center",
   },
   titulo: {
-    textAlign:"left",
+    textAlign: "left",
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-  botonComprar: { 
-    marginBottom: "10px", 
-    color: "red" 
-    
-  }
+  botonComprar: {
+    marginBottom: "10px",
+    color: "red",
+  },
 });
