@@ -71,10 +71,10 @@ export default class ModoEntrega extends React.Component {
                 }}
               >
                 <Image
-                  style={{ width: 50, height: 75 }}
-                  source={require("../../assets/pesos.png")}
+                  style={{ width: 100, height: 100 }}
+                  source={require("../../assets/moto.png")}
                 />
-                <Text>Efectivo</Text>
+                <Text>Envío a Domicilio</Text>
               </View>
             </Card>
           </Col>
@@ -96,8 +96,9 @@ export default class ModoEntrega extends React.Component {
             >
               <Image
                 style={{ width: 100, height: 100, marginLeft: 15 }}
-                source={require("../../assets/mp.jpeg")}
+                source={require("../../assets/shop.png")}
               />
+              <Text>Retiro en el Local</Text>
               {/* <Text>Efectivo</Text> */}
             </Card>
           </Col>
@@ -113,9 +114,8 @@ export default class ModoEntrega extends React.Component {
           <Button
             title="Siguiente"
             //   onPress={() => navigation.push("ModoPago")}
-            style={{
-              color: "#6200ed",
-            }}
+
+            color="#6200ed"
           />
         </Row>
       </Grid>
