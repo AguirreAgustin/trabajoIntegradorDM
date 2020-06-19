@@ -16,6 +16,8 @@ import PreCompraScreen from "../Views/PreCompra";
 import CompraScreen from "../Views/Compra";
 import MontoTotalScreen from "../Views/MontoTotal";
 import ReservaExito from "../Views/ReservaExito";
+import DetallesReserva from "../Views/DetallesReserva";
+import DetallesPreReserva from "../Views/DetallesPreReserva";
 
 const Stack = createStackNavigator();
 const FlujoCompradorStack = () => {
@@ -134,6 +136,28 @@ const FlujoCompradorStack = () => {
       <Stack.Screen
         name="ReservaExito"
         component={ReservaExito}
+        options={({ navigation }) => ({
+          headerTitleAlign: "center",
+          headerTintColor: "black",
+          headerLeft: (props) => (
+            <MenuHamburguesa {...props} navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="DetallesReserva"
+        component={DetallesReserva}
+        options={({ navigation }) => ({
+          headerTitleAlign: "center",
+          headerTintColor: "black",
+          headerLeft: (props) => (
+            <MenuHamburguesa {...props} navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="DetallesPreReserva"
+        component={DetallesPreReserva}
         options={({ navigation }) => ({
           headerTitleAlign: "center",
           headerTintColor: "black",

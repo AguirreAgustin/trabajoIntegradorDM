@@ -9,7 +9,7 @@ export default function PreCompraScreen({ navigation }) {
       <Text style={styles.descripcion}>Tienes 2 días para retirarlo en el</Text>
       <Text style={styles.descripcion}>local.</Text>
       <Text style={styles.perfilVendedor}>VER PERFIL DEL VENDEDOR</Text>
-      <Text style={styles.perfilVendedor}>VER DETALLES DE LA COMPRA</Text>
+      <Text style={styles.perfilVendedor} onPress={() => navigation.push("DetallesReserva")}>VER DETALLES DE LA COMPRA</Text>
       <View style={styles.container2}>
         <Button
           title="INICIO"
