@@ -10,6 +10,8 @@ import Listado from "../Views/listado";
 import PageInit from "../Views/PageInit";
 import PageInit2 from "../Views/PageInit2";
 import PageInit3 from "../Views/PageInit3";
+import ModoPago from "../Views/ModoPago";
+import ModoEntrega from "../Views/ModoEntrega";
 
 const Stack = createStackNavigator();
 const FlujoCompradorStack = () => {
@@ -62,6 +64,28 @@ const FlujoCompradorStack = () => {
       <Stack.Screen
         name="Listado"
         component={Listado}
+        options={({ navigation }) => ({
+          headerTitleAlign: "center",
+          headerTintColor: "black",
+          headerLeft: (props) => (
+            <MenuHamburguesa {...props} navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="ModoPago"
+        component={ModoPago}
+        options={({ navigation }) => ({
+          headerTitleAlign: "center",
+          headerTintColor: "black",
+          headerLeft: (props) => (
+            <MenuHamburguesa {...props} navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="ModoEntrega"
+        component={ModoEntrega}
         options={({ navigation }) => ({
           headerTitleAlign: "center",
           headerTintColor: "black",

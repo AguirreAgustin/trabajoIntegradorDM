@@ -28,7 +28,11 @@ export default function HomeScreen({ navigation }) {
             />
           </View>
           <View style={{ margin: 10 }}>
-            <Button title="Quiero Vender" color="#6200EE" />
+            <Button
+              title="Quiero Vender"
+              onPress={() => navigation.push("ModoPago")}
+              color="#6200EE"
+            />
           </View>
         </View>
       </View>
